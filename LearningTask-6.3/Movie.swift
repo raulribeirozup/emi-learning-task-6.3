@@ -15,3 +15,9 @@ import Foundation
 //    case notRecommendedUnder16 = "16"
 //    case notRecommendedUnder18 = "18"
 //}
+
+// ON SCENE DELEGATE:
+//        let selectedMovie = Movie(backgroundImage: "Background", posterImage: "Poster",
+//                                  title: "Doutor Estranho no Multiverso da Loucura",
+//                                  rating: .notRecommendedUnder14, durationInMinutes: 126,
+//                                  criticsScore: 93, publicScore: 98)

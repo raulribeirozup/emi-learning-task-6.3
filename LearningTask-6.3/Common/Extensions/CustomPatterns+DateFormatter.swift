@@ -9,23 +9,23 @@ import Foundation
 
 extension DateFormatter {
     
-    private static var dayPlusMonthFormatter: DateFormatter {
+    private static var dayPlusMonthFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM"
         return formatter
-    }
+    }()
     
-    private static var weekdayStringFormatter: DateFormatter {
+    private static var weekdayStringFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE"
         return formatter
-    }
+    }()
     
-    private static var hoursPlusMinutesFormatter: DateFormatter {
+    private static var hoursPlusMinutesFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "kk:mm"
         return formatter
-    }
+    }()
     
     enum CustomPattern {
         case dayPlusMonth

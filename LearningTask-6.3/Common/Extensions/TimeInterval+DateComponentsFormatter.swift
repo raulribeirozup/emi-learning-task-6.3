@@ -9,12 +9,15 @@ import Foundation
 
 extension DateComponentsFormatter {
     
-    static func format(timeInterval: TimeInterval) -> String {
+    private static var hoursMinutesFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .abbreviated
         formatter.allowedUnits = [.hour, .minute]
-        
-        return formatter.string(from: timeInterval)!
+        return formatter
+    }()
+    
+    static func format(timeInterval: TimeInterval) -> String {
+        return hoursMinutesFormatter.string(from: timeInterval)!
     }
     
 }
