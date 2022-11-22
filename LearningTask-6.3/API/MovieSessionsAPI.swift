@@ -29,17 +29,5 @@ class MovieSessionsAPI {
             Sessions(comingSessions: comingSessions, by: Cinema(name: "Kinoplex Vila Olímpia", favorite: false)),
             Sessions(comingSessions: comingSessions, by: Cinema(name: "UCI Anália Franco", favorite: false)),
         ]
-        
-//        return [
-//            Sessions(comingSessions, by: Cinema(name: "Cinemark Boulevard Tatuapé", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "Cinemark Eldorado", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "Cinemark Paulista", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "Cinépolis JK Iguatemi", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "Espaço Itaú de Cinema - Pompéia", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "Kinoplex Itaim", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "Kinoplex Vila Olímpia", favorite: false)),
-//            Sessions(comingSessions, by: Cinema(name: "UCI Anália Franco", favorite: false)),
-//        ]
-        
     }
 }

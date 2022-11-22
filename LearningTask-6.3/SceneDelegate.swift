@@ -29,7 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let controller = window?.rootViewController as! CinemaViewController
         controller.selectedMovie = selectedMovie
         controller.sessions = sessions
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -47,5 +47,4 @@ extension DateFormatter {
     static func format(date: Date, to customPattern: CustomPattern) -> String {
         return customPattern.formatter.string(from: date)
     }
-    
 }

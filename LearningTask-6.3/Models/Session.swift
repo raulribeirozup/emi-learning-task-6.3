@@ -33,8 +33,3 @@ struct Sessions {
     let comingSessions: [Session]
     let by: Cinema
 }
-
-
-
-
-// Sessions(comingSessions, by: Cinema(name: "Cinemark Boulevard Tatuapé", favorite: false)),
