@@ -23,3 +23,18 @@ struct Session {
         self.movie = movie
     }
 }
+
+struct Cinema {
+    let name: String
+    let favorite: Bool
+}
+
+struct Sessions {
+    let comingSessions: [Session]
+    let by: Cinema
+}
+
+
+
+
+// Sessions(comingSessions, by: Cinema(name: "Cinemark Boulevard Tatuapé", favorite: false)),
