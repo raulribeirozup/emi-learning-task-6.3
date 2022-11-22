@@ -11,9 +11,8 @@ class CinemaViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    var movie: Movie = Movie(backgroundImage: "Background", posterImage: "Poster", title: "Doutor Estranho no Multiverso da Loucura", rating: .notRecommendedUnder14, durationInMinutes: 126, criticsScore: 93, publicScore: 98)
-    
-    var sessions: [Sessions] = []
+    var selectedMovie: Movie?
+    var sessions: [Sessions]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +20,15 @@ class CinemaViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.tableHeaderView = TableHeaderView.build(from: movie)
-        
-        sessions = MovieSessionsAPI().getSessionBy(movie)
+        tableView.tableHeaderView = TableHeaderView.build(from: selectedMovie!)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sessions.count
+        return sessions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sessions[section].comingSessions.count
+        return sessions?[section].comingSessions.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,7 +36,7 @@ class CinemaViewController: UIViewController, UITableViewDataSource, UITableView
             fatalError("Não foi possível obter célula para a lista de horários")
         }
         
-        let session = sessions[indexPath.section].comingSessions[indexPath.row]
+        let session = sessions![indexPath.section].comingSessions[indexPath.row]
         
         cell.setup(session)
                 
