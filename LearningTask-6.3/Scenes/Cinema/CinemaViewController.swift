@@ -21,6 +21,8 @@ class CinemaViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         
         tableView.tableHeaderView = TableHeaderView.build(from: selectedMovie!)
+        tableView.register(TableSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: TableSectionHeaderView.reuseId)
+        tableView.sectionHeaderHeight = TableSectionHeaderView.heightConstant
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +41,17 @@ class CinemaViewController: UIViewController, UITableViewDataSource, UITableView
         let session = sessions![indexPath.section].comingSessions[indexPath.row]
         
         cell.setup(session)
-                
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TableSectionHeaderView.reuseId) as? TableSectionHeaderView else {
+            fatalError("Não foi possível obter header view para a tabela")
+        }
+        
+        let cinema = sessions![section].by
+        
+        header.setup(cinema)
+        return header
     }
 }

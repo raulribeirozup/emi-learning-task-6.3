@@ -250,7 +250,7 @@ fileprivate class HeaderContentView: UIView {
         label.textColor = .white
         label.font = .systemFont(ofSize: 10, weight: .regular)
         label.textAlignment = .center
-        label.text = DateComponentsFormatter.format(timeInterval: TimeInterval(movie.durationInMinutes))
+        label.text = DateComponentsFormatter.format(timeInterval: TimeInterval(movie.durationInMinutes * 60))
         return label
     }()
 

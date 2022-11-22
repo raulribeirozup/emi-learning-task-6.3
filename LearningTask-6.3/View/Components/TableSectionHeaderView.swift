@@ -1,7 +1,43 @@
 
 import UIKit
 
-class TableSectionHeaderView { // : ?
+class TableSectionHeaderView: UITableViewHeaderFooterView {
+    
+    static var heightConstant: CGFloat = 48
+    static var reuseId: String {
+        return String(describing: self)
+    }
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        addViews()
+    }
+    
+    private func addViews() {
+        addSubview(containerStackView)
+        addConstraints()
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: Self.heightConstant)
+        ])
+        
+        NSLayoutConstraint.activate([
+            containerStackView.topAnchor.constraint(equalTo: topAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+    }
     
     // MARK: - subviews
     private lazy var iconImageView: UIImageView = {
@@ -41,6 +77,8 @@ class TableSectionHeaderView { // : ?
         return stack
     }()
     
-    // ?
+    func setup(_ cinema: Cinema) {
+        label.text = cinema.name
+    }
 
 }

@@ -21,7 +21,6 @@
 		B7CF8BA5292BE75400FDB322 /* CinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8BA4292BE75400FDB322 /* CinemaViewController.swift */; };
 		B7CF8BA8292BEC2900FDB322 /* SessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8BA7292BEC2900FDB322 /* SessionViewCell.swift */; };
 		B7CF8BAC292BEE7700FDB322 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8BAB292BEE7700FDB322 /* Session.swift */; };
-		B7CF8BAE292C95EA00FDB322 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF8BAD292C95EA00FDB322 /* SessionStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		B7CF8BA4292BE75400FDB322 /* CinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaViewController.swift; sourceTree = "<group>"; };
 		B7CF8BA7292BEC2900FDB322 /* SessionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewCell.swift; sourceTree = "<group>"; };
 		B7CF8BAB292BEE7700FDB322 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		B7CF8BAD292C95EA00FDB322 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +167,6 @@
 			children = (
 				5859923028099C350059475F /* Movie.swift */,
 				B7CF8BAB292BEE7700FDB322 /* Session.swift */,
-				B7CF8BAD292C95EA00FDB322 /* SessionStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 			files = (
 				58599245280A2DF70059475F /* TimeInterval+DateComponentsFormatter.swift in Sources */,
 				5859922F280876310059475F /* TableHeaderView.swift in Sources */,
-				B7CF8BAE292C95EA00FDB322 /* SessionStore.swift in Sources */,
 				585992362809AC220059475F /* TableSectionHeaderView.swift in Sources */,
 				5859921B28084E800059475F /* AppDelegate.swift in Sources */,
 				5859923E2809D0A90059475F /* MovieSessionsAPI.swift in Sources */,
