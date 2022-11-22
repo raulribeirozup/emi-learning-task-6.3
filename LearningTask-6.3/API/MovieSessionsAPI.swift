@@ -5,10 +5,10 @@
 //  Created by rafael.rollo on 15/04/2022.
 //
 
-import Foundation
-
-class MovieSessionsAPI {
-    
+//import Foundation
+//
+//class MovieSessionsAPI {
+//    
 //    func getSessionBy(_ movie: Movie) -> [Sessions] {
 //        let comingSessions = [
 //            Session(dateTime: Calendar.current.date(byAdding: .minute, value: 75, to: .now)!,
@@ -31,4 +31,4 @@ class MovieSessionsAPI {
 //        ]
 //        
 //    }
-}
+//}
